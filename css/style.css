@@ -132,7 +132,6 @@ h6 {
 }
 
 html {
-  overflow-x: hidden;
   min-width: 320px;
   font-size: 62.5%;
 }
@@ -142,6 +141,21 @@ body {
   font-size: 1.6rem;
   color: #fff;
   font-family: 'Gilroy';
+  position: relative;
+  overflow-x: hidden;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.fixed-element-popup {
+  position: fixed;
+  left: 1px;
+  top: 1px;
+  z-index: -100;
+  width: 1px;
+  height: 1px;
 }
 
 .footer {
@@ -521,6 +535,7 @@ body {
   color: #000;
   padding: 7rem 0;
   text-align: center;
+  background-color: #fff;
 }
 
 .contacts__title {
@@ -730,6 +745,436 @@ body {
   object-fit: contain;
 }
 
+.anfisa-store {
+  position: relative;
+  font-size: 1.4rem;
+}
+
+.anfisa-store .contacts {
+  border-radius: 5rem;
+}
+
+.anfisa-store p,
+.anfisa-store span {
+  display: inline;
+}
+
+.anfisa-store__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #f5f5f5;
+  width: 100%;
+}
+
+.anfisa-store__top {
+  position: relative;
+  padding-bottom: 13rem;
+}
+
+.anfisa-store__top::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20rem;
+  height: 15rem;
+  background-image: url("../img/anfisa/anfisa-logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.anfisa-store__logo {
+  padding: 0 6.5rem;
+  line-height: 120%;
+  color: rgba(245, 245, 245, 0.5);
+  position: relative;
+}
+
+.anfisa-store__logo::after {
+  content: "";
+  z-index: 100;
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-image: url("../img/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.anfisa-store__title {
+  margin: 3rem 0;
+  font-size: 2.2rem;
+  line-height: 120%;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.01rem;
+}
+
+.anfisa-store__results {
+  margin: 3rem 0;
+  font-size: 1.8rem;
+  line-height: 120%;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.01rem;
+}
+
+.anfisa-store__paragraphs-list_item {
+  margin-top: 1rem;
+}
+
+.anfisa-store__paragraphs-list_item:first-child {
+  margin-top: 0;
+}
+
+.anfisa-store__intro {
+  padding: 4rem 0;
+}
+
+.anfisa-store__tasks {
+  padding: 4rem 0;
+}
+
+.anfisa-store__realization {
+  padding: 4rem 0;
+}
+
+.anfisa-store__problems {
+  padding: 4rem 0;
+}
+
+.anfisa-store__conclusions {
+  padding: 4rem 0;
+}
+
+.red-background {
+  background-color: #CE1800;
+}
+
+.list-item-casepage {
+  margin-left: 1.5rem;
+  padding-left: 1.5rem;
+  line-height: 120%;
+  position: relative;
+}
+
+.list-item-casepage::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: #980e00;
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(237, 36, 13, 0.5);
+  box-shadow: 0px 0px 3px 1px rgba(237, 36, 13, 0.5);
+}
+
+.list-item-casepage::after:hover {
+  -webkit-box-shadow: 0px 0px 3px 1px #ed240d;
+  box-shadow: 0px 0px 3px 1px #ed240d;
+}
+
+.intro-casepage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-bottom: 5rem;
+}
+
+.intro-casepage__paragraph {
+  margin-bottom: 2rem;
+}
+
+.intro-casepage__results {
+  margin-bottom: 2rem;
+}
+
+.intro-casepage__image {
+  display: block;
+  width: 80%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.intro-casepage .mac-tel {
+  position: relative;
+}
+
+.intro-casepage .mac-tel::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 70%;
+  background-image: url("../img/anfisa/anfisa-img2_after.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 100;
+  -webkit-transform: translate(50%, 25%);
+  -ms-transform: translate(50%, 25%);
+  transform: translate(50%, 25%);
+}
+
+.intro-casepage__moving-stroke {
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+
+.title-casepage {
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2.4rem;
+  letter-spacing: 0.02rem;
+  margin-bottom: 3rem;
+}
+
+.title-casepage span {
+  position: relative;
+  z-index: 100;
+}
+
+.title-casepage span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110%;
+  height: 110%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #CE1800;
+  z-index: -1;
+}
+
+.paragraph-casepage {
+  line-height: 110%;
+}
+
+.tasks-casepage__paragraph {
+  padding-left: 3.5rem;
+  line-height: 110%;
+}
+
+.tasks-casepage__socials {
+  padding-left: 3.5rem;
+  margin-top: 1rem;
+}
+
+.tasks-casepage__main-text {
+  margin-top: 2rem;
+}
+
+.maintext-casepage {
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.realization-casepage__top {
+  margin-bottom: 4rem;
+}
+
+.realization-casepage__main-text {
+  margin-bottom: 4rem;
+}
+
+.realization-casepage__image {
+  display: block;
+  width: 80%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.realization-casepage__img-phones {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.points-realization {
+  margin-bottom: 3rem;
+}
+
+.points-realization__item {
+  margin-bottom: 3rem;
+  line-height: 140%;
+}
+
+.points-realization__item:last-child {
+  margin-bottom: 0;
+}
+
+.points-realization__item_title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2rem;
+  color: #fff;
+  padding-left: 3rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.points-realization__item_title::before {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: red;
+  -webkit-box-shadow: 0px 0px 12px 6px rgba(237, 36, 13, 0.5);
+  box-shadow: 0px 0px 12px 6px rgba(237, 36, 13, 0.5);
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: italic;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.points-realization__item_title-first::before {
+  content: "1";
+}
+
+.points-realization__item_title-second::before {
+  content: "2";
+}
+
+.points-realization__item_title-third::before {
+  content: "3";
+}
+
+.points-realization__item_title-fourth::before {
+  content: "4";
+}
+
+.mainitalic-casepage {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.problems-casepage {
+  line-height: 130%;
+}
+
+.results-casepage__title-text {
+  text-transform: none;
+}
+
+.results-casepage__img1 {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  margin-top: 2.5rem;
+}
+
+.results-casepage__img2 {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  margin-top: 2.5rem;
+}
+
+.results-casepage__main-text {
+  margin: 2.5rem auto;
+  text-align: center;
+  width: 80%;
+  text-transform: none;
+}
+
+.results-casepage__img3 {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.results-casepage__img4 {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.results-casepage__img5 {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.results-casepage__img6 {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.results-casepage__img7 {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  margin-top: 2.5rem;
+}
+
+.conclusions-casepage {
+  line-height: 140%;
+}
+
+/*
+paragraph-casepage
+mainitalic-casepage
+red-background
+
+*/
+
 .footer {
   background-color: #000;
   padding: 8rem 0;
@@ -786,6 +1231,105 @@ body {
   text-decoration: underline;
 }
 
+.popup {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: opacity .1s ease 0s;
+  -o-transition: opacity .1s ease 0s;
+  transition: opacity .1s ease 0s;
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup.open .popup__content {
+  opacity: 1;
+}
+
+.popup__body {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.popup__content {
+  background-color: #000;
+  color: #fff;
+  max-width: 95%;
+  position: relative;
+  border-radius: 5rem;
+  padding: 4rem .5rem;
+  border: 1px solid #ed240d;
+  -webkit-box-shadow: 0px 0px 12px 6px rgba(237, 36, 13, 0.5);
+  box-shadow: 0px 0px 12px 6px rgba(237, 36, 13, 0.5);
+  -webkit-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+  opacity: 0;
+}
+
+.popup__close {
+  position: fixed;
+  z-index: 1000;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 12px 6px rgba(237, 36, 13, 0.5);
+  box-shadow: 0px 0px 12px 6px rgba(237, 36, 13, 0.5);
+  right: 1.5rem;
+  top: 1.5rem;
+  background-color: red;
+  -webkit-transition: opacity .3s ease 0s;
+  -o-transition: opacity .3s ease 0s;
+  transition: opacity .3s ease 0s;
+}
+
+.popup__close::after,
+.popup__close::before {
+  content: "";
+  position: absolute;
+  width: .3rem;
+  height: 2rem;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+}
+
+.popup__close::after {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.popup__close::before {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.popup__close:hover {
+  opacity: .8;
+}
+
 @media screen and (min-width: 577px) {
   .container {
     max-width: 540px;
@@ -835,3 +1379,9 @@ body {
 }
 
 .webp .intro__bckg-mask { background-image: url(../img/intro-mask.webp); }
+
+.webp .anfisa-store__top::after { background-image: url(../img/anfisa/anfisa-logo.webp); }
+
+.webp .anfisa-store__logo::after { background-image: url(../img/logo.webp); }
+
+.webp .intro-casepage .mac-tel::after { background-image: url(../img/anfisa/anfisa-img2_after.webp); }
